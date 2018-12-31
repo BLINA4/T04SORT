@@ -18,11 +18,14 @@ void FillEq( int *Mas, int N );
 void FillRand( int *Mas, int N );
 void FillMostly( int *Mas, int N );   
 
-/* Sort functions */
+/* Sort N^2 functions */
 void BubbleSort( int *Mas, int N );
 void BubbleSort1( int *Mas, int N );
 void InsertionSort( int *Mas, int N );
 void SelectionSort( int *Mas, int N );   
+
+/* Sort LN functions */
+void MergeSort( int *Mas, int N );
 
 #endif /* __SORT_H_ */
 
