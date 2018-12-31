@@ -10,7 +10,7 @@
 /* Integer swap function */
 void Swap( int *X, int *Y )
 {
-  int *tmp;
+  int tmp;
 
   tmp = *X;
   *X = *Y;
@@ -36,29 +36,17 @@ void FillIncr( int *Mas, int N )
 {
   int i, x;
 
-  srand(clock());
-
-  x = rand();
-
-  Mas[0] = x;
-
-  for (i = 1; i < N; i++)
-    Mas[i] = Mas[i - 1] + x; 
+  for (i = 0; i < N; i++)
+    Mas[i] = i; 
 } /* End of 'FillIncr' function */
 
 /* Massive fill with decreasing values function */
 void FillDecr( int *Mas, int N )
 {
-  int i, x;
- 
-  srand(clock());
+  int i;
 
-  x = rand();
- 
-  Mas[N - 1] = x;
- 
-  for (i = N - 2; i >= 0; i--)
-    Mas[i] = Mas[i + 1] + x;
+  for (i = 0; i < N; i++)
+    Mas[i] = N - i;
 } /* End of 'FillDecr' function */
 
 /* Massive fill with random values function */

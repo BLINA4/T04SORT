@@ -12,7 +12,7 @@ void BubbleSort( int *Mas, int N )
   for (i = 0; i < N - 1; i++)
     for (j = 0; j < N - 1; j++) 
       if (Mas[j] > Mas[j + 1])
-        Swap(Mas[j], Mas[j + 1]);  
+        Swap(&Mas[j], &Mas[j + 1]);  
 } /* End of 'BubbleSort' function */
 
 /* Bubble sort (upgraded) function */
