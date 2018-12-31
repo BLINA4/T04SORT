@@ -7,7 +7,7 @@
 /* Bubble sort function */
 void BubbleSort( int *Mas, int N )
 {
-
+  
 } /* End of 'BubbleSort' function */
 
 /* Bubble sort (upgraded) function */
