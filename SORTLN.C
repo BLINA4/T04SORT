@@ -48,5 +48,64 @@ void MergeSort( int *Mas, int N )
   Merge(Mas, N, M);
 } /* End of 'MergeSort' function */
 
+/* Quick sort function */
+void QuickSort( int *Mas, int N )
+{
+  int x = Mas[N / 2], b, e;
+
+  b = 0;
+  e = N - 1;
+
+  if (N < 2)
+    return;
+
+  while (b <= e)
+  {
+    while (Mas[b] < x)
+      b++;
+    while (Mas[e] > x)
+      e--;
+    if (b <= e)
+      Swap(&Mas[b++], &Mas[e--]);
+  }
+
+  QuickSort(Mas, e + 1);
+  QuickSort(Mas + b, N - b);
+} /* End of 'QuickSort' function */
+
+/* Heap correction function */
+void HeapCorrection( int *Mas, int N, int i )
+{
+  int l = 2 * i + 1, r = 2 * i + 2, big = i;
+
+  if (l < N && Mas[i] < Mas[l])
+    big = l;
+
+  if (r < N && Mas[big] < Mas[r])
+    big = r;
+
+  if (i != big)
+  {
+    Swap(&Mas[i], &Mas[big]);
+    HeapCorrection(Mas, N, big);
+  }    
+} /* End of 'HeapCorrection' fucntion */
+
+/* Head sort function */
+void HeapSort( int *Mas, int N )
+{
+  int i;
+
+  for (i = N / 2 - 1; i >= 0; i--)
+    HeapCorrection(Mas, N, i);
+
+  for (i = N - 1; i >= 0; i--)
+  {
+    Swap(&Mas[0], &Mas[i]);  
+    
+    HeapCorrection(Mas, i, 0);
+  }
+} /* End of 'HeapSort' function */
+
 /* END OF 'SORTLN.C' FILE */
 

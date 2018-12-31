@@ -15,7 +15,7 @@ void main( void )
 
   void (*Sort[])(int *Mas, int N) =
   {
-    BubbleSort, BubbleSort1, InsertionSort, SelectionSort, MergeSort  
+    BubbleSort, BubbleSort1, InsertionSort, SelectionSort, MergeSort, QuickSort, HeapSort  
   };
 
   void (*Fill[])(int *Mas, int N) =
@@ -25,7 +25,7 @@ void main( void )
 
   char *SortName[] = 
   {
-    "BubbleSort", "BubbleSort1", "InsertionSort", "SelectionSort", "MergeSort"
+    "BubbleSort", "BubbleSort1", "InsertionSort", "SelectionSort", "MergeSort", "QuickSort", "HeapSort"
   };
 
   static int Mas[MAX];

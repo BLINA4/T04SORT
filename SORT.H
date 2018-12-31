@@ -5,7 +5,7 @@
 #ifndef __SORT_H_
 #define __SORT_H_
 
-#define MAX 5000
+#define MAX 100000
 
 /* Utility functions */
 void Swap( int *X, int *Y );
@@ -26,6 +26,8 @@ void SelectionSort( int *Mas, int N );
 
 /* Sort LN functions */
 void MergeSort( int *Mas, int N );
+void QuickSort( int *Mas, int N );
+void HeapSort( int *Mas, int N );
 
 #endif /* __SORT_H_ */
 
