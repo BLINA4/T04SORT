@@ -5,7 +5,7 @@
 #ifndef __SORT_H_
 #define __SORT_H_
 
-#define MAX 50000
+#define MAX 5000
 
 /* Utility functions */
 void Swap( int *X, int *Y );
