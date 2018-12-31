@@ -6,6 +6,7 @@
 
 #include "SORT.H"
 
+/* Massive merge function */
 void Merge( int *Mas, int N, int M )
 {
   int i, j, k, *x = malloc(N * sizeof (int));
@@ -30,7 +31,7 @@ void Merge( int *Mas, int N, int M )
   }
 
   free(x);  
-}  
+} /* End of 'Merge' function */ 
 
 /* Merge sort function */
 void MergeSort( int *Mas, int N )
